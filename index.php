@@ -1,6 +1,14 @@
 <?php
 require 'functions.php';
-$mahasiswa=query("SELECT * FROM mahasiswa")
+$mahasiswa=query("SELECT * FROM mahasiswa");
+
+// tombol cari ditekan
+// cari pada line 7 adalah name dari button
+if(isset($_POST["cari"]))
+{
+    // cari line10 adalah function cari dan keyword adalah name dari inputan text
+    $mahasiswa=cari($_POST["keyword"]);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
