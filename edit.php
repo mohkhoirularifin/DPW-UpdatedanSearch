@@ -1,5 +1,15 @@
 <?php
     require 'functions.php';
+
+    // menggunakan method get untuk mengambil id yang telah terseleksi oleh user dan dimasukkan
+    // ke dalam variabel baru yaitu $id
+    $id = $_GET[id];
+    // var_dump($id);
+
+    // query berdasarkan id
+    $mhs = query("SELECT * FROM mahasiswa WHERE id=$id");
+    var_dump($mhs[0]["Nama"]);
+
     // cek apakah button sudah ditekan atau belum
     if(isset($_POST['submit']))
     {
@@ -24,14 +34,7 @@
             echo mysqli_error($conn);
         }
     }
-    // menggunakan method get untuk mengambil id yang telah terseleksi oleh user dan dimasukkan
-    // ke dalam variabel baru yaitu $id
-    $id = $_GET[id];
-    // var_dump($id);
 
-    // query berdasarkan id
-    $mhs = query("SELECT * FROM mahasiswa WHERE id=$id");
-    var_dump($mhs);
 ?>
 
 
