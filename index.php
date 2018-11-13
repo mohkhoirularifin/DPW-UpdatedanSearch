@@ -13,6 +13,14 @@ $mahasiswa=query("SELECT * FROM mahasiswa")
 <body>
     <h1>Daftar Mahasiswa</h1>
     <a href="tambah_data.php">Tambah Data Mahasiswa</a>
+    <form action="" method="post">
+    <!-- autofocus atribut pada html 5 yang digunakan untuk memberikan tanda pertama kali ke inputan pada saat page direload -->
+    <!-- placeholder atribut yang digunakan untuk menampilkan tulisan pada texbox -->
+    <!-- autocomplete digunakan agar history pencarian dari user lain tidak ada -->
+    <input type="text" name="keyword" size="40" autofocus placeholder="Masukkan Keyword Pencarian" autocomplete="off">
+    <button type="submit" name="cari"> Cari</button>
+    </form>
+    <br>
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>No. </th>
