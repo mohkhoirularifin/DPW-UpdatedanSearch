@@ -27,12 +27,16 @@
     // menggunakan method get untuk mengambil id yang telah terseleksi oleh user dan dimasukkan
     // ke dalam variabel baru yaitu $id
     $id = $_GET[id];
-    var_dump($id);
+    // var_dump($id);
+
+    // query berdasarkan id
+    $mhs = query("SELECT * FROM mahasiswa WHERE id=$id");
+    var_dump($mhs);
 ?>
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
