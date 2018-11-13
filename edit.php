@@ -24,6 +24,10 @@
             echo mysqli_error($conn);
         }
     }
+    // menggunakan method get untuk mengambil id yang telah terseleksi oleh user dan dimasukkan
+    // ke dalam variabel baru yaitu $id
+    $id = $_GET[id];
+    var_dump($id);
 ?>
 
 
@@ -65,7 +69,7 @@
                     <button type="submit" name="submit"> Update </button>
                 </li>
             </ul>
-            
+
         </form>
     </body>
 </html>
