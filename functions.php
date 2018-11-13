@@ -64,4 +64,20 @@ function edit ($data){
 
     return mysqli_affected_rows($conn);
 }
+
+function cari($keyword)
+{
+    $sql= "SELECT * FROM mahasiswa
+            WHERE
+            Nama LIKE '%$keyword%' OR
+            Nim LIKE '%$keyword%' OR
+            Email LIKE '%$keyword%' OR
+            Jurusan LIKE '%$keyword%'
+            ";
+
+            // kembalikan ke function query dengan parameter $sql
+            return query($sql);
+
+        // cat: pastikan $keyword pada line 77 terdapat petik satu karena nilainya berupa String
+}
 ?>
